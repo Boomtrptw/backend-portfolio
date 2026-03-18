@@ -11,7 +11,15 @@ const dashboardRoutes = require("./routes/dashboardRoutes");
 const app = express()
 connectDB()
 
-app.use(cors())
+app.use(cors({
+  origin: [
+    "http://localhost:3000",
+    "https://portfolio-frontend-orcin-beta.vercel.app/" // เพิ่ม URL ของ Vercel เข้าไปตรงนี้
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
+
 app.use(express.json())
 
 // --- ย้ายมาไว้ตรงนี้ ---
