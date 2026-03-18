@@ -11,9 +11,14 @@ const options = {
     },
     servers: [
       {
-        url: "http://localhost:5000"
-      }
-    ]
+        url: "https://boom-portfolio-backend.onrender.com", // เพิ่ม URL Render ของคุณบูมตรงนี้
+        description: "Production Server (Render)",
+      },
+      {
+        url: "http://localhost:5000",
+        description: "Local Development Server",
+      },
+    ],
   },
   // ใช้ path.join เพื่อความแม่นยำ ไม่ว่าสคริปต์จะรันจากโฟลเดอร์ไหน
   apis: [
