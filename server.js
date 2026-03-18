@@ -12,10 +12,7 @@ const app = express()
 connectDB()
 
 app.use(cors({
-  origin: [
-    "http://localhost:3000",
-    "https://portfolio-frontend-orcin-beta.vercel.app/" // เพิ่ม URL ของ Vercel เข้าไปตรงนี้
-  ],
+  origin: "*",
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
